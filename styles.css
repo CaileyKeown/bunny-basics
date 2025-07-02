@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #ff69b4;
+  margin: 0;
+  background-color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2px solid #ff69b4;
+}
+
+.logo {
+  width: 50px;
+  vertical-align: middle;
+}
+
+.description {
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  border-bottom: 2px solid #ff69b4;
+  margin: 10px 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.overview {
+  padding: 20px;
+  border-bottom: 2px solid #ff69b4;
+}
+
+.overview-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.overview-content img {
+  width: 150px;
+}
+
+.overview-content button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.video-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.video-section img {
+  width: 150px;
+}
+
+.watch-now {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.previews {
+  padding: 20px;
+  border-top: 2px solid #ff69b4;
+}
+
+.preview-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.preview-item {
+  text-align: center;
+}
+
+.preview-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.text-preview {
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ff69b4;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #ff69b4;
+}
+
+.bunny-rating {
+  font-size: 18px;
+  color: #ff69b4;
+}

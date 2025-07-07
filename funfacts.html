@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buniversity – Bunny Fun Facts</title>
+  <meta name="description" content="Fun and surprising facts about rabbits!" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+
+
+<body>
+
+
+
+
+<!--This is the page logo-->
+<header class="header-top">
+  <img src="images/bunny-logo.png" alt="Bunny logo" class="logo wiggle-bunny" />
+  <h1>Buniversity</h1>
+  <p class="description">Your guide to happy, healthy bunnies!</p>
+</header>
+
+
+
+
+<!--For navigating throughout entire webpage-->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="behavior.html">Behavior</a></li>
+      <li><a href="diet.html">Diet</a></li>
+      <li><a href="care.html">Care</a></li>
+      <li><a href="health.html">Health</a></li>
+      <li><a href="funfacts.html" class="active">Fun Facts</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <main>
+    <section class="overview">
+      <h2>Fun Facts About Bunnies</h2>
+      <div class="overview-content">
+        <img src="images/funfacts-image.png" alt="Funny bunny">
+        <p>Coming soon: Bunnies can be litter trained, they do binkies, and more!</p>
+      </div>
+    </section>
+  </main>
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Buniversity</p>
+  </footer>
+
+
+
+
+<!--Coming back to this later. This is example for "Form"as asked for on checklist-->
+<!--Possibly add some JavaScript work to give a "thank you" after user submits?-->
+<form action="#" method="post">
+  <label for="name">Your Name:</label><br />
+  <input type="text" id="name" name="name" required><br /><br />
+
+  <label for="question">Your Bunny Question:</label><br />
+  <textarea id="question" name="question" rows="4" cols="40" required></textarea><br /><br />
+
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+<!--This is to connect to JavaScript-->
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>

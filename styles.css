@@ -5,19 +5,34 @@ body {
   background-color: #fff;
 }
 
+
+
+
+
+
 header {
-  text-align: center;
   padding: 20px;
   border-bottom: 2px solid #ff69b4;
 }
 
-.logo {
-  width: 50px;
-  vertical-align: middle;
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
 }
+
+.logo {
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+
 
 .description {
   font-weight: bold;
+  margin-top: 5px;
 }
 
 nav ul {
@@ -67,69 +82,22 @@ nav a.active {
   width: 150px;
 }
 
-.overview-content button {
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.video-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.video-section img {
-  width: 150px;
-}
-
-.watch-now {
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.previews {
-  padding: 20px;
-  border-top: 2px solid #ff69b4;
-}
-
-.preview-gallery {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.preview-item {
-  text-align: center;
-}
-
-.preview-item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.text-preview {
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #ff69b4;
-}
-
 footer {
   text-align: center;
   padding: 15px;
   border-top: 2px solid #ff69b4;
 }
 
-.bunny-rating {
-  font-size: 18px;
-  color: #ff69b4;
+
+
+@keyframes earWiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wiggle-bunny:hover {
+  animation: earWiggle 0.5s ease-in-out;
 }

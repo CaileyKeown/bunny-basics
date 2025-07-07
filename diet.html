@@ -27,10 +27,46 @@
   <p class="description">Your guide to happy, healthy bunnies!</p>
 </header>
 
+  <style>
+    h2 {
+      margin-top: 2rem;
+    }
+    .overview-heading { color: #68a40d; }
+    .diet-heading { color: #68a40d; }
+    .greens-heading { color: #68a40d; }
+    .pellets-heading { color: #68a40d; }
+    .water-heading { color: #68a40d; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #ff9602aa; /*table color*/
+    }
+    .white-bg {
+  background-color: white;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.spaced-img {
+  margin-top: 1.5rem;
+}
+
+.treats-heading {
+  color: #68a40d; /* for fruit section */
+}
+
+  </style>
 
 
-
-<!--For navigating throughout webpage-->>
+<!--For navigating throughout webpage-->
 <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -45,17 +81,129 @@
 
 
 
-
-  <main>
-    <section class="overview">
-      <h2>Bunny Diet</h2>
-      <div class="overview-content">
-        <img src="images/diet-image.png" alt="Bunny eating vegetables">
-        <p>Coming soon: Learn about hay, pellets, veggies, treats, and foods to avoid.</p>
-      </div>
+<main>
+    <section>
+      <h2 class="overview-heading">Overview</h2>
+      <p>
+        Rabbits have very specific dietary needs that keep their digestive systems healthy and their teeth in good shape. Unlike other pets, rabbits require a diet that is mostly made up of fiber-rich hay. Hay not only aids in digestion but also helps wear down their continuously growing teeth. A balanced rabbit diet also includes leafy green vegetables and a small number of pellets for added nutrients. Avoid feeding sugary treats or high-carb foods, as these can lead to health problems.
+      </p>
+      <img src="images/bunnyfood.png" alt="Bunny food" width="150" />
     </section>
-  </main>
 
+    <section>
+      <h2 class="diet-heading">Daily Diet Breakdown</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Food Type</th>
+            <th>Recommended Portion</th>
+            <th>Why It’s Important</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hay & Fresh Grass</td>
+            <td>~85%</td>
+            <td>Essential for digestion and dental health</td>
+          </tr>
+          <tr>
+            <td>Leafy Greens</td>
+            <td>~10%</td>
+            <td>Provides essential vitamins and hydration</td>
+          </tr>
+          <tr>
+            <td>Pellets</td>
+            <td>~5%</td>
+            <td>Optional supplement for extra nutrients</td>
+          </tr>
+        </tbody>
+      </table>
+      <img src="images/bunnyeating.png" alt="Bunny eating food" width="100" class="behavior-img white-bg spaced-img" />
+    </section>
+
+    <section>
+      <h2 class="greens-heading">Leafy Greens: How Much to Feed</h2>
+      <p>
+        Adjust the amount of fresh leafy greens based on your rabbit’s body weight. These veggies support hydration and add nutritional variety.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Rabbit Weight</th>
+            <th>Max Amount of Leafy Greens</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2 lbs</td><td>1 cup</td></tr>
+          <tr><td>3 lbs</td><td>1.5 cups</td></tr>
+          <tr><td>4 lbs</td><td>2 cups</td></tr>
+          <tr><td>5 lbs</td><td>2.5 cups</td></tr>
+          <tr><td>6 lbs</td><td>3 cups</td></tr>
+          <tr><td>7 lbs</td><td>3.5 cups</td></tr>
+          <tr><td>8 lbs</td><td>4 cups</td></tr>
+          <tr><td>9 lbs</td><td>4.5 cups</td></tr>
+          <tr><td>10 lbs</td><td>5 cups</td></tr>
+        </tbody>
+      </table>
+
+<img src="images/veggies.png" alt="safe vegetables for bunnies" width="280" class="behavior-img white-bg spaced-img" />
+
+
+      <h3>Safe Greens</h3>
+      <ul>
+        <li>Arugula</li>
+        <li>Carrot tops</li>
+        <li>Leafy lettuces (red, green, romaine)</li>
+        <li>Turnip greens</li>
+        <li>Dandelion greens</li>
+        <li>Mint, Basil, Cilantro</li>
+        <li>Watercress, Dill, Bok choy</li>
+      </ul>
+
+<img src="images/bunnyfoodoptions.png" alt="bunny food options" width="170" class="behavior-img white-bg spaced-img" />
+
+
+      <h3>Greens to Avoid</h3>
+      <ul>
+        <li>Iceberg lettuce</li>
+        <li>Onion greens</li>
+      </ul>
+    </section>
+
+    <section>
+  <h2 class="treats-heading">Fruit Treats (In Moderation!)</h2>
+  <p>
+    While a rabbit’s diet should mainly consist of hay and leafy greens, small amounts of fruit can be given as occasional treats. Fruits like banana slices, apples (without seeds), blueberries, pears, melons, and strawberries are bunny-safe in tiny portions. These should be limited to just a few bites a few times a week, as too much sugar can upset their digestion.
+  </p>
+
+  <div class="image-row">
+    <img src="images/bunnywithfruit.png" alt="Bunny with fruit" width="119" class="behavior-img white-bg" />
+    <img src="images/bunnytreats.png" alt="Bunny treats" width="300" class="behavior-img white-bg" />
+  </div>
+
+</section>
+
+
+    <section>
+      <h2 class="pellets-heading">Pellets</h2>
+      <p>
+        Pellets are optional but can be a helpful supplement if used sparingly. Be cautious not to overfeed, as excess pellets can lead to obesity and discourage hay consumption. Stick to a measured amount once daily and avoid refilling if they finish early.
+      </p>
+      <img src="images/bunnywithpellets.png" alt="Bunny with pellets" width="110" class="behavior-img white-bg spaced-img" />
+    </section>
+
+    <section>
+      <h2 class="water-heading">Water & Treats</h2>
+      <p>
+        Fresh, clean water must always be available. Dehydration can lead to serious illness in rabbits. Occasional treats are okay, but limit sugary fruits and commercial snacks.
+      </p>
+      <img src="images/bunnywithfood.png" alt="Bunny with food" width="120" class="behavior-img white-bg spaced-img" />
+    </section>
+
+    <footer>
+      <p>Sources: The Fact File, Rabbit Care Guide, RSPCA</p>
+    </footer>
+  </main>
 
 
 
@@ -63,28 +211,6 @@
   <footer>
     <p>&copy; 2025 Buniversity</p>
   </footer>
-
-
-<!--This is an example for format of how to do a table, as asked of by checklist -->
-<!--Will keep, maybe?-->
-<table border="1">
-  <tr>
-    <th>Food</th>
-    <th>Safe for Bunnies?</th>
-  </tr>
-  <tr>
-    <td>Hay</td>
-    <td>✅ Yes</td>
-  </tr>
-  <tr>
-    <td>Carrots</td>
-    <td>✅ Yes (in moderation)</td>
-  </tr>
-  <tr>
-    <td>Chocolate</td>
-    <td>❌ No</td>
-  </tr>
-</table>
 
 
 

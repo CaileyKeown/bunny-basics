@@ -1,27 +1,26 @@
 body {
   font-family: Arial, sans-serif;
-  color: #f7efdb;
+  color: #000000;
   margin: 0;
-  background-color: #fff9ce;
+  background-color: #ffcd8c41;
 }
 
 header {
   padding: 20px;
-  border-bottom: 2px solid #ff69b4;
+  border-bottom: 2px solid #eda048;
 }
 
 .header-top {
   /* Temporarily change flex to block for testing */
   display: block;
   text-align: center;
-  /* Removed gap since block ignores it */
 }
 
 .logo {
   width: 100px; /* increased size for visibility */
-  border: 2px solid red; /* red border to see image area */
+  border: 2px solid rgb(241, 147, 24);
   transition: transform 0.3s ease;
-  display: inline-block; /* keep it inline for centering */
+  display: inline-block;
 }
 
 .description {
@@ -34,7 +33,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 0;
-  border-bottom: 2px solid #ff69b4;
+  border-bottom: 2px solid #faab5c;
   margin: 10px 0;
 }
 
@@ -44,7 +43,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #ff69b4;
+  color: #ff9a3b;
   font-weight: bold;
 }
 
@@ -62,7 +61,7 @@ nav a.active {
 
 .overview {
   padding: 20px;
-  border-bottom: 2px solid #ff69b4;
+  border-bottom: 2px solid #ffae2c;
 }
 
 .overview-content {
@@ -79,7 +78,7 @@ nav a.active {
 footer {
   text-align: center;
   padding: 15px;
-  border-top: 2px solid #ff69b4;
+  border-top: 2px solid #ff9c3e;
 }
 
 @keyframes earWiggle {

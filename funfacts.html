@@ -9,6 +9,49 @@
   <title>Buniversity – Bunny Fun Facts</title>
   <meta name="description" content="Fun and surprising facts about rabbits!" />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    h2 {
+      margin-top: 2rem;
+    }
+
+    .fact-form {
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top: 2px dashed #ff9602aa;
+}
+
+.fact-form input[type="text"],
+.fact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ff9602aa;
+}
+
+.fact-form input[type="submit"] {
+  background-color: #ff9602aa;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fact-form input[type="submit"]:hover {
+  background-color: #5a3b82;
+}
+
+
+    .basic-heading { color: #68a40d; }      /* Purple */
+    .senses-heading { color: #68a40d; }     /* Teal */
+    .behavior-heading { color: #68a40d; }   /* Orange */
+    .health-heading { color: #68a40d; }     /* Coral Red */
+    .social-heading { color: #68a40d; }     /* Deep Blue */
+  </style>
+
 </head>
 
 
@@ -44,14 +87,78 @@
 
 
 
+
   <main>
-    <section class="overview">
-      <h2>Fun Facts About Bunnies</h2>
-      <div class="overview-content">
-        <img src="images/funfacts-image.png" alt="Funny bunny">
-        <p>Coming soon: Bunnies can be litter trained, they do binkies, and more!</p>
-      </div>
+    <section class="fact-group">
+      <h2 class="basic-heading">Basic Bunny Facts</h2>
+      <ul>
+        <li>Adult rabbits usually weigh between 2.4 and 5.5 pounds.</li>
+        <li>They can jump over 2 feet high in a single leap.</li>
+        <li>Pet rabbits typically live 5–10 years, and even longer if spayed or neutered.</li>
+        <li>Baby rabbits are called kits or kittens and are born blind and hairless, relying completely on their mother for warmth and safety.</li>
+        <li>Mother rabbits can give birth to as many as 14 kits in one litter, after a pregnancy lasting just 28–31 days.</li>
+      </ul>
+      <img src="images/bunnyfamily.png" alt="Bunny with its baby" width="150" class="behavior-img white-bg spaced-img" />
     </section>
+
+    <section class="fact-group">
+      <h2 class="senses-heading">Rabbit Bodies & Senses</h2>
+      <ul>
+        <li>Rabbits’ eyes are located on the sides of their head, allowing them nearly 360° vision to watch for predators.</li>
+        <li>They have large ears that rotate independently to detect sounds and help regulate body temperature by releasing excess heat.</li>
+        <li>Rabbit teeth grow continuously throughout their life but are naturally worn down by chewing hay, grass, and vegetables.</li>
+        <li>A rabbit's top front teeth can grow about 3mm per week if not kept in check by proper chewing.</li>
+      </ul>
+      <img src="images/bunnyteeth.png" alt="Bunny showing teeth" width="120" class="behavior-img white-bg spaced-img" />
+    </section>
+
+    <section class="fact-group">
+      <h2 class="behavior-heading">Behaviors & Movements</h2>
+      <ul>
+        <li>Rabbits can purr by softly grinding their teeth- it’s a sign they’re happy and content.</li>
+        <li>When feeling playful or joyful, they may perform a "binky"- a jump with a twist and kick in midair!</li>
+        <li>Loafing, nudging, grooming, and chin- rubbing are other common rabbit behaviors that express comfort or curiosity.</li>
+        <li>Despite their small size, rabbits can reach speeds up to 35 miles per hour when running!</li>
+      </ul>
+      <img src="images/bunnyprrr.png" alt="Happy bunny purring" width="130" class="behavior-img white-bg spaced-img" />
+    </section>
+
+    <section class="fact-group">
+      <h2 class="health-heading">Poop, Digestion & Health</h2>
+      <ul>
+        <li>Rabbits produce two types of droppings: regular round pellets and cecotropes- nutrient-rich droppings that they eat to support digestion and overall health.</li>
+        <li>Staying hydrated and eating lots of hay is essential for their gut health and to prevent dental issues.</li>
+      </ul>
+      <img src="images/bunnydroppings.png" alt="Bunny droppings" width="200" class="behavior-img white-bg spaced-img" />
+    </section>
+
+    <section class="fact-group">
+      <h2 class="social-heading">Social Life & Friendships</h2>
+      <ul>
+        <li>Rabbits are social animals and can form close bonds with other rabbits and sometimes with other pets like guinea pigs or dogs- under careful supervision.</li>
+        <li>They communicate through body language, subtle sounds, and scent marking, making them both unique and expressive companions.</li>
+      </ul>
+      <img src="images/bunnyandcat.png" alt="Bunny with a cat" width="200" class="behavior-img white-bg spaced-img" />
+    </section>
+
+<section class="fact-form">
+  <h2 class="basic-heading">Have a Bunny Fun Fact You’d Like to Share?</h2>
+  <form action="#" method="post">
+    <label for="name">Your Name:</label><br />
+    <input type="text" id="name" name="name" required><br /><br />
+
+    <label for="fact">Your Bunny Fun Fact:</label><br />
+    <textarea id="fact" name="fact" rows="4" cols="40" required></textarea><br /><br />
+
+    <input type="submit" value="Submit">
+  </form>
+</section>
+
+
+
+    <footer>
+      <p>Sources: The Fact File, Rabbit Care Guide, RSPCA, National Geographic Kids, Everbreed</p>
+    </footer>
   </main>
 
 
@@ -64,17 +171,6 @@
 
 
 
-<!--Coming back to this later. This is example for "Form"as asked for on checklist-->
-<!--Possibly add some JavaScript work to give a "thank you" after user submits?-->
-<form action="#" method="post">
-  <label for="name">Your Name:</label><br />
-  <input type="text" id="name" name="name" required><br /><br />
-
-  <label for="question">Your Bunny Question:</label><br />
-  <textarea id="question" name="question" rows="4" cols="40" required></textarea><br /><br />
-
-  <input type="submit" value="Submit">
-</form>
 
 
 
@@ -83,6 +179,13 @@
 <script src="script.js"></script>
 
 
+<script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // prevent real form submission
+    alert("Thank you for sharing your bunny fact!");
+    this.reset(); // clear form fields
+  });
+</script>
 
 
 </body>

@@ -58,9 +58,57 @@
 .spaced-img {
   margin-top: 1.5rem;
 }
+.food-grid img {
+  width: 80px; /* adjust as needed */
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.food-grid img:hover {
+  transform: scale(1.1);
+}
 
 .treats-heading {
   color: #68a40d; /* for fruit section */
+}
+.bunny-interaction {
+  margin-top: 60px;        /* pushes it down from other content */
+  padding: 20px;           /* adds space inside the border */
+  border: 3px solid #ffa94d; /* solid border around the game */
+  border-radius: 12px;     /* slightly rounded corners */
+  background-color: #fff7ec; /* optional: light background to help it stand out */
+}
+
+.bunny-interaction-layout {
+  display: flex;
+  justify-content: flex-start;  /* Align items to the left */
+  align-items: flex-start;
+  gap: 20px;                    /* Smaller gap between food & bunny */
+  max-width: 700px;             /* Limit width to bring everything tighter 
+}
+
+
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px); /* 4 items per row */
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.bunny-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* <-- pull bunny closer to the food */
+  padding-left: 0px;          /* optional: fine-tune spacing */
+  flex-shrink: 0;
+}
+
+.bunny-image img {
+  width: 250px; /* increase size */
+  height: auto;
 }
 
   </style>
@@ -199,6 +247,50 @@
       </p>
       <img src="images/bunnywithfood.png" alt="Bunny with food" width="120" class="behavior-img white-bg spaced-img" />
     </section>
+
+
+
+
+<section class="bunny-interaction">
+  <h2>Feed the Bunny!</h2>
+  <p>Select a food item to feed the bunny and see how it reacts.</p>
+
+  <div class="bunny-interaction-layout">
+    <!-- Food Grid on the Left -->
+    <div class="food-grid">
+      <img src="images/carrot.png" alt="Carrot" onclick="feedBunny('carrot')" />
+      <img src="images/garlic.png" alt="Garlic" onclick="feedBunny('garlic')" />
+      <img src="images/bokchoy.png" alt="Bok Choy" onclick="feedBunny('bokchoy')" />
+      <img src="images/hay.png" alt="Hay" onclick="feedBunny('hay')" />
+      <img src="images/spinach.png" alt="Spinach" onclick="feedBunny('spinach')" />
+      <img src="images/chocolate.png" alt="Chocolate" onclick="feedBunny('chocolate')" />
+      <img src="images/iceberglettuce.png" alt="Iceberg Lettuce" onclick="feedBunny('iceberglettuce')" />
+      <img src="images/pellets.png" alt="Pellets" onclick="feedBunny('pellets')" />
+      <img src="images/meat.png" alt="Meat" onclick="feedBunny('meat')" />
+      <img src="images/banana.png" alt="Banana" onclick="feedBunny('banana')" />
+      <img src="images/strawberry.png" alt="Strawberry" onclick="feedBunny('strawberry')" />
+      <img src="images/avocodo.png" alt="Avocado" onclick="feedBunny('avocodo')" />
+      <img src="images/onion.png" alt="Onion" onclick="feedBunny('onion')" />
+      <img src="images/bread.png" alt="Bread" onclick="feedBunny('bread')" />
+      <img src="images/stick.png" alt="Stick" onclick="feedBunny('stick')" />
+      <img src="images/rhubarb.png" alt="Rhubarb" onclick="feedBunny('rhubarb')" />
+      <img src="images/seedsandnuts.png" alt="Seeds and Nuts" onclick="feedBunny('seedsandnuts')" />
+      <img src="images/cheese.png" alt="Cheese" onclick="feedBunny('cheese')" />
+      <img src="images/peanutbutter.png" alt="Peanut Butter" onclick="feedBunny('peanutbutter')" />
+      <img src="images/eggs.png" alt="Eggs" onclick="feedBunny('eggs')" />
+    </div>
+
+    <!-- Bunny on the Right -->
+    <div class="bunny-image">
+      <img id="bunnyImage" src="images/neutralbunny.png" alt="Neutral Bunny" />
+    </div>
+  </div>
+
+  <p id="reactionText" class="reaction-text"></p>
+</section>
+
+
+
 
     <footer>
       <p>Sources: The Fact File, Rabbit Care Guide, RSPCA</p>

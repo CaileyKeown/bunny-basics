@@ -27,108 +27,126 @@
   <p class="description">Your guide to happy, healthy bunnies!</p>
 </header>
 
-  <style>
-    h2 {
-      margin-top: 2rem;
-    }
-    .overview-heading { color: #68a40d; }
-    .diet-heading { color: #68a40d; }
-    .greens-heading { color: #68a40d; }
-    .pellets-heading { color: #68a40d; }
-    .water-heading { color: #68a40d; }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      border: 1px solid #999;
-      padding: 0.75rem;
-      text-align: left;
-    }
-    th {
-      background-color: #ff9602aa; /*table color*/
-    }
-    .white-bg {
-  background-color: white;
-  padding: 8px;
-  border-radius: 6px;
-}
+<style>
+  h2 {
+    margin-top: 2rem;
+  }
 
-.spaced-img {
-  margin-top: 1.5rem;
-}
-.food-grid img {
-  width: 80px; /* adjust as needed */
-  height: auto;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
+  .overview-heading,
+  .diet-heading,
+  .greens-heading,
+  .pellets-heading,
+  .water-heading,
+  .treats-heading {
+    color: #68a40d;
+  }
 
-.food-grid img:hover {
-  transform: scale(1.1);
-}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
 
-.treats-heading {
-  color: #68a40d; /* for fruit section */
-}
-.bunny-interaction {
-  margin-top: 60px;        /* pushes it down from other content */
-  padding: 20px;           /* adds space inside the border */
-  border: 3px solid #ffa94d; /* solid border around the game */
-  border-radius: 12px;     /* slightly rounded corners */
-  background-color: #fff7ec; /* optional: light background to help it stand out */
-}
+  th, td {
+    border: 1px solid #999;
+    padding: 0.75rem;
+    text-align: left;
+  }
 
-.bunny-interaction-layout {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 100%; /* prevent hard cutoff */
-}
+  th {
+    background-color: #ff9602aa;
+  }
 
+  .white-bg {
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .spaced-img {
+    margin-top: 1.5rem;
+  }
+
+  /* === INTERACTIVE GAME SECTION === */
+  .bunny-interaction {
+    margin-top: 60px;
+    padding: 20px;
+    border: 3px solid #ffa94d;
+    border-radius: 12px;
+    background-color: #fff7ec;
+  }
+
+  .bunny-interaction-layout-wrapper {
+    overflow-x: auto;
+  }
+
+  .bunny-interaction-layout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 1rem;
+    max-width: 1000px;
+  }
 
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 5 even columns */
   gap: 12px;
+  max-width: 420px; /* 5 x 80px images + gaps */
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 
-.bunny-image {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex: 0 0 150px;
-  margin-top: 10px;
-}
+  .food-grid img {
+    width: 80px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
 
-.bunny-image img {
-  width: 250px; /* increase size */
-  height: auto;
-}
+  .food-grid img:hover {
+    transform: scale(1.1);
+  }
 
-/* Make reaction text always show under the bunny+food */
-.reaction-text {
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 1rem;
-  color: #904200;
-}
+  .bunny-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 0 200px;
+  }
 
-.bunny-interaction-layout-wrapper {
-  width: 100%;
-  overflow-x: hidden;
-}
+  .bunny-image img {
+    width: 250px;
+    height: auto;
+  }
 
+  .reaction-text {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #904200;
+  }
 
-  </style>
+  /* === MOBILE RESPONSIVE === */
+  @media (max-width: 768px) {
+    .food-grid {
+      grid-template-columns: repeat(3, 80px);
+    }
+
+    .bunny-interaction-layout {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bunny-image {
+      margin-top: 20px;
+    }
+  }
+</style>
+
 
 
 <!--For navigating throughout webpage-->
@@ -272,6 +290,7 @@
   <h2>Feed the Bunny!</h2>
   <p>Select a food item to feed the bunny and see how it reacts.</p>
 
+<div class="bunny-interaction-layout-wrapper">
   <div class="bunny-interaction-layout">
     <!-- Food Grid on the Left -->
     <div class="food-grid">
@@ -302,6 +321,7 @@
       <img id="bunnyImage" src="images/neutralbunny.png" alt="Neutral Bunny" />
     </div>
   </div>
+</div>
 
   <p id="reactionText" class="reaction-text"></p>
 </section>

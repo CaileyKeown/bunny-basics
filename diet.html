@@ -92,12 +92,10 @@
 
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 even columns */
+  grid-template-columns: repeat(5, 80px); /* 5 items per row, each 80px wide */
   gap: 12px;
-  max-width: 420px; /* 5 x 80px images + gaps */
-  width: 100%;
+  width: max-content; /* only take up as much space as needed */
 }
-
 
   .food-grid img {
     width: 80px;
@@ -144,6 +142,17 @@
     .bunny-image {
       margin-top: 20px;
     }
+    .food-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+.food-grid figcaption {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  color: #444;
+}
+
   }
 </style>
 
@@ -294,27 +303,90 @@
   <div class="bunny-interaction-layout">
     <!-- Food Grid on the Left -->
     <div class="food-grid">
-      <img src="images/carrot.png" alt="Carrot" onclick="feedBunny('carrot')" />
-      <img src="images/garlic.png" alt="Garlic" onclick="feedBunny('garlic')" />
-      <img src="images/bokchoy.png" alt="Bok Choy" onclick="feedBunny('bokchoy')" />
-      <img src="images/hay.png" alt="Hay" onclick="feedBunny('hay')" />
-      <img src="images/spinach.png" alt="Spinach" onclick="feedBunny('spinach')" />
-      <img src="images/chocolate.png" alt="Chocolate" onclick="feedBunny('chocolate')" />
-      <img src="images/iceberglettuce.png" alt="Iceberg Lettuce" onclick="feedBunny('iceberglettuce')" />
-      <img src="images/pellets.png" alt="Pellets" onclick="feedBunny('pellets')" />
-      <img src="images/meat.png" alt="Meat" onclick="feedBunny('meat')" />
-      <img src="images/banana.png" alt="Banana" onclick="feedBunny('banana')" />
-      <img src="images/strawberry.png" alt="Strawberry" onclick="feedBunny('strawberry')" />
-      <img src="images/avocodo.png" alt="Avocado" onclick="feedBunny('avocodo')" />
-      <img src="images/onion.png" alt="Onion" onclick="feedBunny('onion')" />
-      <img src="images/bread.png" alt="Bread" onclick="feedBunny('bread')" />
-      <img src="images/stick.png" alt="Stick" onclick="feedBunny('stick')" />
-      <img src="images/rhubarb.png" alt="Rhubarb" onclick="feedBunny('rhubarb')" />
-      <img src="images/seedsandnuts.png" alt="Seeds and Nuts" onclick="feedBunny('seedsandnuts')" />
-      <img src="images/cheese.png" alt="Cheese" onclick="feedBunny('cheese')" />
-      <img src="images/peanutbutter.png" alt="Peanut Butter" onclick="feedBunny('peanutbutter')" />
-      <img src="images/eggs.png" alt="Eggs" onclick="feedBunny('eggs')" />
-    </div>
+  <figure>
+    <img src="images/carrot.png" alt="Carrot" onclick="feedBunny('carrot')" />
+    <figcaption>Carrot</figcaption>
+  </figure>
+  <figure>
+    <img src="images/garlic.png" alt="Garlic" onclick="feedBunny('garlic')" />
+    <figcaption>Garlic</figcaption>
+  </figure>
+  <figure>
+    <img src="images/bokchoy.png" alt="Bok Choy" onclick="feedBunny('bokchoy')" />
+    <figcaption>Bok Choy</figcaption>
+  </figure>
+  <figure>
+    <img src="images/hay.png" alt="Hay" onclick="feedBunny('hay')" />
+    <figcaption>Hay</figcaption>
+  </figure>
+  <figure>
+    <img src="images/spinach.png" alt="Spinach" onclick="feedBunny('spinach')" />
+    <figcaption>Spinach</figcaption>
+  </figure>
+  <figure>
+    <img src="images/chocolate.png" alt="Chocolate" onclick="feedBunny('chocolate')" />
+    <figcaption>Chocolate</figcaption>
+  </figure>
+  <figure>
+    <img src="images/iceberglettuce.png" alt="Iceberg Lettuce" onclick="feedBunny('iceberglettuce')" />
+    <figcaption>Iceberg Lettuce</figcaption>
+  </figure>
+  <figure>
+    <img src="images/pellets.png" alt="Pellets" onclick="feedBunny('pellets')" />
+    <figcaption>Pellets</figcaption>
+  </figure>
+  <figure>
+    <img src="images/meat.png" alt="Meat" onclick="feedBunny('meat')" />
+    <figcaption>Meat</figcaption>
+  </figure>
+  <figure>
+    <img src="images/banana.png" alt="Banana" onclick="feedBunny('banana')" />
+    <figcaption>Banana</figcaption>
+  </figure>
+  <figure>
+    <img src="images/strawberry.png" alt="Strawberry" onclick="feedBunny('strawberry')" />
+    <figcaption>Strawberry</figcaption>
+  </figure>
+  <figure>
+    <img src="images/avocodo.png" alt="Avocado" onclick="feedBunny('avocodo')" />
+    <figcaption>Avocado</figcaption>
+  </figure>
+  <figure>
+    <img src="images/onion.png" alt="Onion" onclick="feedBunny('onion')" />
+    <figcaption>Onion</figcaption>
+  </figure>
+  <figure>
+    <img src="images/bread.png" alt="Bread" onclick="feedBunny('bread')" />
+    <figcaption>Bread</figcaption>
+  </figure>
+  <figure>
+    <img src="images/stick.png" alt="Stick" onclick="feedBunny('stick')" />
+    <figcaption>Stick</figcaption>
+  </figure>
+  <figure>
+    <img src="images/rhubarb.png" alt="Rhubarb" onclick="feedBunny('rhubarb')" />
+    <figcaption>Rhubarb</figcaption>
+  </figure>
+  <figure>
+    <img src="images/seedsandnuts.png" alt="Seeds and Nuts" onclick="feedBunny('seedsandnuts')" />
+    <figcaption>Seeds & Nuts</figcaption>
+  </figure>
+  <figure>
+    <img src="images/cheese.png" alt="Cheese" onclick="feedBunny('cheese')" />
+    <figcaption>Cheese</figcaption>
+  </figure>
+  <figure>
+    <img src="images/peanutbutter.png" alt="Peanut Butter" onclick="feedBunny('peanutbutter')" />
+    <figcaption>Peanut Butter</figcaption>
+  </figure>
+  <figure>
+    <img src="images/eggs.png" alt="Eggs" onclick="feedBunny('eggs')" />
+    <figcaption>Eggs</figcaption>
+  </figure>
+</div>
+
+
+
 
     <!-- Bunny on the Right -->
     <div class="bunny-image">

@@ -21,7 +21,7 @@ function feedBunny(food) {
     rhubarb: { image: "images/upsetbunny.png", text: "Rhubarb is dangerous for bunnies!" },
     seedsandnuts: { image: "images/upsetbunny.png", text: "Nuts and seeds can be a choking hazard!" },
     cheese: { image: "images/upsetbunny.png", text: "Bunnies don’t eat dairy!" },
-    peanutbutter: { image: "images/upsetbunny.png", text: "Too sticky and fatty for a bunny!" },
+    peanutbutter: { image: "images/upsetbunny.png", text: "Peanut butter? Too sticky and fatty for a bunny!" },
     eggs: { image: "images/upsetbunny.png", text: "No eggs for me, I’m vegan by nature!" },
   };
 

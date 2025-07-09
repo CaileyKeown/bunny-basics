@@ -33,12 +33,13 @@ header {
 
 nav ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   padding: 0;
   border-bottom: 2px solid #faab5c;
   margin: 10px 0;
+  gap: 15px;
+  white-space: nowrap;
 }
 
 nav li {

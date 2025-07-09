@@ -85,31 +85,40 @@
   display: flex;
   justify-content: flex-start;  /* Align items to the left */
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 20px;                    /* Smaller gap between food & bunny */
-  max-width: 700px;             /* Limit width to bring everything tighter 
+  max-width: 700px;             /* Limit width to bring everything tighter */
 }
-
-
 
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(4, 80px); /* 4 items per row */
-  gap: 15px;
-  flex-shrink: 0;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 12px;
+  flex: 1;
+  max-width: 400px;
 }
 
 .bunny-image {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
-  justify-content: flex-start; /* <-- pull bunny closer to the food */
-  padding-left: 0px;          /* optional: fine-tune spacing */
-  flex-shrink: 0;
+  flex: 0 0 150px;
+  margin-top: 10px;
 }
 
 .bunny-image img {
   width: 250px; /* increase size */
   height: auto;
 }
+
+/* Make reaction text always show under the bunny+food */
+.reaction-text {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #904200;
+}
+
 
   </style>
 

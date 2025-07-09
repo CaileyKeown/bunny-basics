@@ -2,9 +2,11 @@ body {
   font-family: Arial, sans-serif;
   color: #000000;
   margin: 0;
+  padding: 0 5vw;
   background-color: #ffcd8c41;
+  padding-left: 20px; /* Creates space on sides */
+  padding-right: 20px;
 }
-
 header {
   padding: 20px;
   border-bottom: 2px solid #eda048;
@@ -31,6 +33,7 @@ header {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   padding: 0;
@@ -39,7 +42,7 @@ nav ul {
 }
 
 nav li {
-  margin: 0 15px;
+  margin: 0 13px;
 }
 
 nav a {
@@ -92,4 +95,9 @@ footer {
 
 .wiggle-bunny:hover {
   animation: earWiggle 0.5s ease-in-out;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

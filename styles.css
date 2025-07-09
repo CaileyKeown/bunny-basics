@@ -37,8 +37,8 @@ nav ul {
   list-style: none;
   padding: 0;
   border-bottom: 2px solid #faab5c;
-  margin: 10px 0;
-  gap: 15px;
+  margin: 5px 0;
+  gap: 5px;
   white-space: nowrap;
 }
 

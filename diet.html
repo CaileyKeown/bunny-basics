@@ -83,20 +83,23 @@
 
 .bunny-interaction-layout {
   display: flex;
-  justify-content: flex-start;  /* Align items to the left */
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 20px;                    /* Smaller gap between food & bunny */
-  max-width: 700px;             /* Limit width to bring everything tighter */
+  gap: 20px;
+  max-width: 100%; /* prevent hard cutoff */
 }
+
 
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   gap: 12px;
-  flex: 1;
-  max-width: 400px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
 
 .bunny-image {
   display: flex;
@@ -117,6 +120,11 @@
   font-weight: bold;
   font-size: 1rem;
   color: #904200;
+}
+
+.bunny-interaction-layout-wrapper {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 

@@ -37,6 +37,58 @@
     .spaced-img {
       margin-top: 1rem;
     }
+
+    .featured-articles {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.featured-articles h2 {
+  text-align: center;
+  color: #68a40d;
+  margin-bottom: 30px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  text-decoration: none;
+  color: #806031;
+  background-color: #fff7ec;
+  border: 2px solid #ffa94d;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.article-card:hover {
+  transform: scale(1.03);
+}
+
+.article-card img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-card p {
+  padding: 12px 10px;
+  font-size: 0.95rem;
+  margin- top: 8px;
+  text-align: center;
+}
+
+.footer-divider {
+  padding: 15px;
+  border-top: 2px solid #ff9c3e
+}
+
   </style>
 </head>
 
@@ -93,8 +145,62 @@
   <footer style="text-align:center; margin-top: 2rem;">
     <p>&copy; 2025 Buniversity. Hoppily made with ❤️</p>
   </footer>
-</body>
-</html>
+  <hr class="footer-divider" />
+
+
+
+
+<!-- FEATURED ARTICLES SECTION -->
+
+<section class="featured-articles">
+  <h2>Explore More Bunny Topics</h2>
+  <div class="article-grid">
+
+    <a href="elder-bunnies.html" class="article-card">
+      <img src="images/bigandsmallbunny.png" alt="Elder Bunny" />
+      <p>Tips for Caring for Older Bunnies</p>
+    </a>
+
+
+    <a href="bunny-friendships.html" class="article-card">
+      <img src="images/bunnyfriends.png" alt="Bunny Friends" />
+      <p>Helping Bunnies Bond with Other Pets</p>
+    </a>
+
+
+    <a href="weight-management.html" class="article-card">
+      <img src="images/overweightbunny.png" alt="Overweight Bunny" />
+      <p>Managing Your Bunny’s Weight</p>
+    </a>
+
+    <a href="bunny-prey.html" class="article-card">
+      <img src="images/bunnypreyanimal.png" alt="Bunny Prey Animal" />
+      <p>Understanding Your Bunny: Life as a Prey Animal</p>
+    </a>
+
+    <a href="how-to-pet.html" class="article-card">
+      <img src="images/pettingbunny.png" alt="Petting a Bunny" />
+      <p>How to Properly Pet a Bunny</p>
+    </a>
+
+
+
+    <a href="indoor-vs-outdoor.html" class="article-card">
+      <img src="images/indoorvsoutdoorbunny.png" alt="Indoor vs Outdoor Bunny" />
+      <p>Choosing the Right Home: Indoor vs. Outdoor Bunny Living</p>
+    </a>
+
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+
+
 
 
 

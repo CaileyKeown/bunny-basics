@@ -1,128 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Managing Your Bunny's Weight</title>
   <link rel="stylesheet" href="styles.css" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #ffeaca24;
+      color: #000000;
       margin: 0;
       padding: 0;
-      background-color: #fffdf7;
     }
 
-    .back-link {
-      display: inline-block;
-      margin: 20px;
-      text-decoration: none;
-      color: #ff8c42;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
+header {
+  background-color: #ffa94d;
+  padding: 30px;
+  text-align: center;
+}
 
-    .back-link:hover {
-      color: #e0752f;
-    }
+header h1 {
+  margin: 0;
+  color: #6c572f;
+}
 
-    .content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-    }
 
-    h1 {
-      color: #68a40d;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: left;
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     h2 {
-      color: #ff8c42;
-      margin-top: 2rem;
-    }
-
-    p, li {
-      font-size: 1rem;
-      line-height: 1.6;
+      color: #68a40d; /* Section Title colors */
+      margin-top: 40px;
     }
 
     ul {
-      margin-left: 1.5rem;
+      list-style: disc;
+      padding-left: 20px;
     }
 
-    .info-img {
-      max-width: 100%;
-      height: auto;
-      margin: 1rem 0;
-      border-radius: 8px;
-      border: 2px solid #ffa94d;
+    section {
+      margin-bottom: 40px;
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffe2c2;
+      border-top: 2px solid #ff9c3e;
+      margin-top: 60px;
+    }
+
+/* GO BACK ARROW */
+.back-link {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+  color: #ff8c42;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #68a40d;
+}
+
+
+.bcs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff7ec;
+  border: 2px solid #ffa94d;
+  font-size: 1rem;
+}
+
+.bcs-table th,
+.bcs-table td {
+  border: 1px solid #ffa94d;
+  padding: 12px;
+  text-align: left;
+}
+
+.bcs-table th {
+  background-color: #ffa94d;
+  color: #fff;
+  font-weight: bold;
+}
+
+.side-by-side-images {
+  display: flex;
+  justify-content: flex-start; /* Aligns to the left */
+  gap: 55px;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+
+.bunny-pic {
+  border-radius: 10px;
+  border: none #ffa94d;
+  background-color: #fff7ec;
+  height: auto;
+}
+
+/* Set individual sizes */
+.bunny1 {
+  width: 200px;
+}
+
+.bunny2 {
+  width: 200px;
+}
+
+.bunny3 {
+  width: 200px;
+}
+
+
+
   </style>
+
 </head>
+
 <body>
   <a href="index.html" class="back-link">&larr; Go Back</a>
-  <div class="content">
+
+  <header>
     <h1>Managing Your Bunny's Weight</h1>
+  </header>
 
-    <p>Keeping your bunny at a healthy weight is vital for a long, comfortable life. Overweight rabbits may develop heart, liver, or digestive issues, while underweight bunnies could face malnutrition, weak immunity, and poor energy. Monitoring their weight regularly is a key part of good rabbit care.</p>
+  <main>
+    <section>
+      <p>Helping your bunny maintain a healthy weight is one of the most important ways to ensure a long, hoppy life. Being too heavy or too skinny can lead to serious health problems, but with the right care, you can keep your rabbit feeling just right.</p>
+    </section>
 
-    <h2>How to Monitor Your Bunny's Weight</h2>
-    <ul>
-      <li><strong>Weigh regularly:</strong> Weigh your rabbit monthly with a digital scale for early signs of weight gain or loss.</li>
-      <li><strong>Use the Body Condition Score (BCS):</strong> A 1–5 scale helps you feel for bones and fat layers to judge if your rabbit is underweight, ideal, or overweight.</li>
-    </ul>
+<section class="side-by-side-images">
+  <img src="images/bigbunny1.png" alt="Big Bunny 1" class="bunny-pic bunny1" />
+  <img src="images/bigbunny2.png" alt="Big Bunny 2" class="bunny-pic bunny2" />
+  <img src="images/bigbunny3.png" alt="Big Bunny 3" class="bunny-pic bunny3" />
+</section>
 
-    <h2>Body Condition Score Chart</h2>
-    <ul>
-      <li><strong>1:</strong> Emaciated – Bones sharp and visible.</li>
-      <li><strong>2:</strong> Thin – Ribs and spine easily felt.</li>
-      <li><strong>3:</strong> Ideal – Ribs are felt with slight pressure.</li>
-      <li><strong>4:</strong> Overweight – Fat deposits noticeable; ribs hard to feel.</li>
-      <li><strong>5:</strong> Obese – Thick fat layer; ribs and spine not felt.</li>
-    </ul>
 
-    <h2>Signs and Causes of Obesity</h2>
-    <p>Fat rolls around the dewlap or belly, sluggish movement, and fast weight gain are all red flags. Common causes include too many sugary treats, a pellet-heavy diet, and not enough exercise or space to hop around.</p>
 
-    <h2>Helping an Overweight Rabbit</h2>
-    <ul>
-      <li><strong>Adjust their diet:</strong> Feed more hay and leafy greens, cut back on high-calcium pellets and sugary snacks.</li>
-      <li><strong>Encourage movement:</strong> Toys, tunnels, and free-roam time boost activity and burn calories.</li>
-      <li><strong>Vet visits:</strong> Get tailored advice and monitor their weight loss safely. Rapid weight loss is dangerous.</li>
-    </ul>
 
-    <h2>Identifying an Underweight Bunny</h2>
-    <ul>
-      <li><strong>Visible bones:</strong> You can feel or see the ribs, spine, and hips.</li>
-      <li><strong>Low energy:</strong> A lack of energy, dull fur, or reduced appetite may point to weight loss or illness.</li>
-    </ul>
+<section>
+  <h2>How to Check Their Weight</h2>
+  <p>Weigh your bunny monthly using a digital scale, and use the Body Condition Score (BCS) chart below:</p>
+  
+  <table class="bcs-table">
+    <thead>
+      <tr>
+        <th>Score</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 – Emaciated</td>
+        <td>Bones very prominent</td>
+      </tr>
+      <tr>
+        <td>2 – Underweight</td>
+        <td>Easily felt ribs and spine</td>
+      </tr>
+      <tr>
+        <td>3 – Ideal</td>
+        <td>Can feel ribs with gentle pressure</td>
+      </tr>
+      <tr>
+        <td>4 – Overweight</td>
+        <td>Hard to feel ribs, some fat rolls</td>
+      </tr>
+      <tr>
+        <td>5 – Obese</td>
+        <td>No bones felt, sagging belly</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-    <h2>Helping an Underweight Rabbit</h2>
-    <ul>
-      <li><strong>Boost calories:</strong> Add more hay, dark greens, and high-quality pellets to meals.</li>
-      <li><strong>Check for health issues:</strong> Parasites, dental issues, or stress may be the cause.</li>
-      <li><strong>Track progress:</strong> Weigh them weekly and consult your vet for nutrition plans.</li>
-    </ul>
 
-    <h2>Smart Feeding for a Healthy Bunny</h2>
-    <ul>
-      <li><strong>Hay:</strong> Should be the base of every bunny’s diet. It supports digestion and dental health.</li>
-      <li><strong>Greens:</strong> Offer a variety like kale, romaine, or herbs. Avoid high-calcium greens in large amounts.</li>
-      <li><strong>Pellets:</strong> Give in moderation. Choose high-fiber, low-sugar options.</li>
-      <li><strong>Water:</strong> Keep it clean and always available to help with digestion and hydration.</li>
-    </ul>
 
-    <h2>Common Mistakes to Avoid</h2>
-    <ul>
-      <li><strong>Too many treats:</strong> Stick to healthy snacks like herbs or small fruit bits.</li>
-      <li><strong>Too little movement:</strong> Exercise is just as important as diet.</li>
-      <li><strong>Ignoring sudden changes:</strong> Weight gain or loss could mean health issues – contact your vet.</li>
-    </ul>
+    <section>
+      <h2>Signs Your Bunny Might Be Overweight</h2>
+      <ul>
+        <li>Visible fat rolls under the chin or belly</li>
+        <li>Trouble hopping or moving around</li>
+        <li>Low energy or lack of interest in play</li>
+      </ul>
+      <img src="images/bunnyfriends.png" alt="Bunny Friends" class="bunny-img" />
+    </section>
 
-    <img src="images/overweightbunny.png" alt="Overweight Bunny" class="info-img">
-  </div>
+    <section>
+      <h2>Helping an Overweight Bunny</h2>
+      <ul>
+        <li>Cut back on pellets and sugary treats</li>
+        <li>Feed more hay and fresh leafy greens</li>
+        <li>Encourage more movement with toys and space</li>
+        <li>Visit your vet for weight loss guidance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Helping an Underweight Bunny</h2>
+      <ul>
+        <li>Increase pellet portions (with vet approval)</li>
+        <li>Offer high-fiber hay and soft veggies</li>
+        <li>Hand-feed treats like banana or papaya</li>
+        <li>Check for dental or digestive issues</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Nutrition Tips</h2>
+      <ul>
+        <li>Hay should be the #1 food source</li>
+        <li>Include dark greens like kale and romaine</li>
+        <li>Limit pellets to avoid overfeeding</li>
+        <li>Provide fresh, clean water at all times</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What to Avoid</h2>
+      <ul>
+        <li>Too many treats or sugary fruits</li>
+        <li>Too much time in a small cage</li>
+        <li>Ignoring signs of weight changes</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Buniversity. Hoppily made with ❤️</p>
+  </footer>
 </body>
+
 </html>

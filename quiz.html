@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bunny Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff4e6;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #ffb347;
+    }
+
+    .question-box {
+      background-color: #fff;
+      border: 3px solid #ffb347;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 20px;
+    }
+
+    .options {
+      list-style: none;
+      padding: 0;
+    }
+
+    .options li {
+      margin: 10px 0;
+      background-color: #ffe2c2;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .options li:hover {
+      background-color: #68441bc6;
+    }
+
+    #result {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    #retakeBtn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #ffa94d;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #retakeBtn:hover {
+      background-color: #ff8c42;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Your Bunny Knowledge!</h1>
+  <img src="images/bunnymenu.png" alt="multiple bunnies" width="300" class="behavior-img white-bg spaced-img" />
+
+  <div id="quiz-container" class="question-box"></div>
+  <div id="result"></div>
+  <button id="retakeBtn" onclick="location.reload()" style="display:none;">Retake Quiz</button>
+
+  <audio id="correct-sound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    const quiz = [
+      {
+        question: "What area should you avoid petting on a bunny?",
+        options: ["Cheeks", "Back", "Chin", "Forehead"],
+        answer: "Chin"
+      },
+      {
+        question: "Which of these plants is poisonous to rabbits?",
+        options: ["Dandelion", "Romaine lettuce", "Hydrangea", "Clover"],
+        answer: "Hydrangea"
+      },
+      {
+        question: "What is one benefit of indoor living for bunnies?",
+        options: ["More sun", "More predators", "Less heat exposure", "Less noise"],
+        answer: "Less heat exposure"
+      },
+      {
+        question: "What is a sign of an underweight rabbit?",
+        options: ["Fat rolls", "Ribs and spine easily felt", "No bones felt", "Sagging belly"],
+        answer: "Ribs and spine easily felt"
+      },
+      {
+        question: "Which of these should not live with bunnies?",
+        options: ["Guinea pigs", "Mice", "Calm cats", "Older dogs"],
+        answer: "Mice"
+      },
+      {
+        question: "What temperature can become dangerous for outdoor rabbits?",
+        options: ["70°F", "75°F", "80°F", "85°F"],
+        answer: "80°F"
+      },
+      {
+        question: "Why should you not pick up a bunny when it’s mad?",
+        options: ["They might sneeze", "They could fall asleep", "They might bite or kick", "They’ll run in circles"],
+        answer: "They might bite or kick"
+      },
+      {
+        question: "What should you do if your rabbit eats a poisonous plant?",
+        options: ["Wait and see", "Offer fruit juice", "Call the vet immediately", "Let them sleep"],
+        answer: "Call the vet immediately"
+      },
+      {
+        question: "Which of these animals is safest to bond with a rabbit?",
+        options: ["Ferret", "Calm dog", "Snake", "Wild bird"],
+        answer: "Calm dog"
+      },
+      {
+        question: "What is the safest indoor setup for bunnies?",
+        options: [
+          "Empty room with tile floors",
+          "A fan and cage in the garage",
+          "Bunny-proofed space with toys and hiding spots",
+          "A cardboard box outside"
+        ],
+        answer: "Bunny-proofed space with toys and hiding spots"
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    const container = document.getElementById("quiz-container");
+    const resultDiv = document.getElementById("result");
+    const correctSound = document.getElementById("correct-sound");
+
+    function showQuestion() {
+      const q = quiz[currentQuestion];
+      container.innerHTML = `
+        <h2>${q.question}</h2>
+        <ul class="options">
+          ${q.options.map(opt => `<li onclick="checkAnswer('${opt}')">${opt}</li>`).join("")}
+        </ul>
+      `;
+    }
+
+    function checkAnswer(selected) {
+      const q = quiz[currentQuestion];
+      if (selected === q.answer) {
+        score++;
+        correctSound.play();
+        confetti({ particleCount: 70, spread: 60, origin: { y: 0.6 } });
+      }
+
+      currentQuestion++;
+      if (currentQuestion < quiz.length) {
+        showQuestion();
+      } else {
+        showResult();
+      }
+    }
+
+    function showResult() {
+      container.innerHTML = "";
+      resultDiv.innerHTML = `
+        <h2>You got ${score} out of ${quiz.length} questions right!</h2>
+        <p>Great job, Bunny Expert!</p>
+      `;
+      document.getElementById("retakeBtn").style.display = "inline-block";
+    }
+
+    showQuestion();
+  </script>
+</body>
+</html>

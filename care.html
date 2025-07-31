@@ -25,6 +25,60 @@
       border-radius: 6px;
       margin-top: 1.5rem;
     }
+
+.bunny-care-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.bunny-care-img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #ffcf9d;
+  border-radius: 20px;
+}
+
+.checklist-container {
+  max-width: 600px;
+  margin: 40px auto 40px 40px; /* Push to the left side */
+  padding: 20px;
+  background-color: #fff8f0;
+  border: 2px solid #f4c08d;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Verdana', sans-serif;
+}
+
+.checklist-container h2 {
+  font-size: 24px;
+  color: #d1833d;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.checklist-container label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #4a3c2f;
+  cursor: pointer;
+}
+
+.checklist-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#completeMessage {
+  font-size: 18px;
+  text-align: left;
+}
+
+}
+
+
   </style>
 
 
@@ -44,7 +98,10 @@
 
 <!--This is the page logo-->
 <header class="header-top">
+  <a href="index.html">
   <img src="images/bunny-logo.png" alt="Bunny logo" class="logo wiggle-bunny" />
+</a>
+
   <h1>Buniversity</h1>
   <p class="description">Your guide to happy, healthy bunnies!</p>
 </header>
@@ -108,6 +165,44 @@
       </p>
       <img src="images/bunnylitterbox.png" alt="Bunny in a litter box" width="110" class="behavior-img white-bg spaced-img" />
     </section>
+
+
+
+<div class="checklist-container">
+  <h2>Is Your Bunny Space Ready?</h2>
+
+  <img src="images/happybunnyready.png" alt="Happy bunny ready with cozy setup" class="bunny-care-img" />
+
+  <form id="bunnyChecklist">
+    <label><input type="checkbox" class="checkItem"> Soft Bunny Bed – A cozy place to rest those fluffy paws.</label>
+    <label><input type="checkbox" class="checkItem"> Toys – To keep your bunny entertained and enriched.</label>
+    <label><input type="checkbox" class="checkItem"> Food Bowl – For hay, pellets, and yummy greens.</label>
+    <label><input type="checkbox" class="checkItem"> Water Bowl – Fresh water to stay hydrated!</label>
+    <label><input type="checkbox" class="checkItem"> Tunnel or Hut – A safe hideaway to feel secure.</label>
+    <label><input type="checkbox" class="checkItem"> Carpeted Flooring – Comfy and safe for little bunny feet.</label>
+  </form>
+
+  <p id="completeMessage" style="display: none; color: #4CAF50; font-weight: bold; margin-top: 20px;">
+    Yay! Your bunny has everything it needs!
+  </p>
+</div>
+
+<script>
+  const checkboxes = document.querySelectorAll('.checkItem');
+  const message = document.getElementById('completeMessage');
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      message.style.display = allChecked ? 'block' : 'none';
+    });
+  });
+</script>
+
+
+
+
+
 
     <footer>
       <p>Sources: RSPCA, Rabbit Care Guide</p>

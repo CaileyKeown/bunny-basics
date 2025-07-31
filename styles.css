@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  font-size: 16px;
   color: #000000;
   margin: 0;
   padding: 0 5vw;
@@ -108,7 +109,6 @@ html, body {
   top: 15px;
   right: 20px; /* side it's on */
   display:flex;
-  flex-direction:column-reverse
   align-items: center;
   background-color: #ffefa8;
   border: 2px solid #ffc84d;
@@ -132,4 +132,18 @@ html, body {
   height: auto;
   margin-bottom: 2px;
   margin-top: 0px;
+}
+
+
+
+nav a,
+label,
+footer,
+p,
+ul,
+ol,
+li,
+input,
+button {
+  font-size: 16px;
 }

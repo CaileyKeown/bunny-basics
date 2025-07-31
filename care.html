@@ -11,75 +11,102 @@
   <meta name="description" content="Learn how to properly care for your pet rabbit." />
   <link rel="stylesheet" href="styles.css" />
 
+
+
 <style>
-    h2 {
-      margin-top: 2rem;
-    }
-    .housing-heading { color: #68a40d; }
-    .safety-heading { color: #68a40d; }
-    .exercise-heading { color: #68a40d; }
-    .cleaning-heading { color: #68a40d; }
-    .behavior-img {
-      background-color: white;
-      padding: 8px;
-      border-radius: 6px;
-      margin-top: 1.5rem;
-    }
+  h2 {
+    margin-top: 2rem;
+  }
 
-.bunny-care-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 30px;
+  .housing-heading,
+  .safety-heading,
+  .exercise-heading,
+  .cleaning-heading {
+    color: #68a40d;
+  }
+
+  .behavior-img {
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 1.5rem;
+  }
+
+  .bunny-care-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align to left */
+    gap: 20px;
+    margin-top: 30px;
+    margin-left: 20px; /* match body padding */
+  }
+
+  .bunny-care-img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #ffcf9d;
+    border-radius: 20px;
+    margin-bottom: 20px; /* add space below image */
+  }
+
+  .checklist-container {
+    max-width: 600px;
+    margin: 0 0 40px 20px; /* left-align like rest of page */
+    padding: 20px;
+    background-color: #fff8f0;
+    border: 2px solid #f4c08d;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: 'Verdana', sans-serif;
+  }
+
+  .checklist-container h2 {
+    font-size: 24px;
+    color: #d1833d;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .checklist-container label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    color: #4a3c2f;
+    line-height: 1.4;
+    background: #fff3e5;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .checklist-container input[type="checkbox"] {
+    transform: scale(1.3); /* make checkboxes bigger */
+    accent-color: #ff9a3b; /* cute orange (browser-dependent) */
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  #completeMessage {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 20px;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+
+  .bunny-divider {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #e0a664;
+  margin: 60px 0 30px 0;
 }
 
-.bunny-care-img {
-  max-width: 100%;
-  height: auto;
-  border: 4px solid #ffcf9d;
-  border-radius: 20px;
-}
-
-.checklist-container {
-  max-width: 600px;
-  margin: 40px auto 40px 40px; /* Push to the left side */
-  padding: 20px;
-  background-color: #fff8f0;
-  border: 2px solid #f4c08d;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  font-family: 'Verdana', sans-serif;
-}
-
-.checklist-container h2 {
-  font-size: 24px;
-  color: #d1833d;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.checklist-container label {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 16px;
-  color: #4a3c2f;
-  cursor: pointer;
-}
-
-.checklist-container input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-#completeMessage {
-  font-size: 18px;
-  text-align: left;
-}
-
-}
+</style>
 
 
-  </style>
+
 
 
 </head>
@@ -166,6 +193,7 @@
       <img src="images/bunnylitterbox.png" alt="Bunny in a litter box" width="110" class="behavior-img white-bg spaced-img" />
     </section>
 
+<hr class="bunny-divider">
 
 
 <div class="checklist-container">
@@ -204,18 +232,18 @@
 
 
 
-    <footer>
-      <p>Sources: RSPCA, Rabbit Care Guide</p>
-    </footer>
+   
   </main>
 
 
 
 
 
-  <footer>
-    <p>&copy; 2025 Buniversity</p>
-  </footer>
+<footer>
+  <p>Sources: RSPCA, Rabbit Care Guide</p>
+  <p>&copy; 2025 Buniversity</p>
+</footer>
+
 
 
 
